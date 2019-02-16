@@ -1,0 +1,25 @@
+server:
+  port: __PORT__ # the port the HTTP server will listen on
+
+  ssl:
+    enabled: false # if https should be enabled
+    redirecttohttps: false # redirect to https if site is accessed by http
+
+  responseheaders: # response headers are added to every response (default: none)
+    Access-Control-Allow-Origin: "*"
+    Access-Control-Allow-Methods: "GET,POST"
+
+  stream:
+    allowedorigins: # allowed origins for websocket connections (same origin is always allowed)
+      - ".+.__DOMAIN__"
+
+database: # for database see (configure database section)
+  dialect: mysql
+  connection: gotify:__DBPASS__@/__DBNAME__?charset=utf8&parseTime=True&loc=Local
+
+defaultuser: # on database creation, gotify creates an admin user
+  name: __ADMINUSER__ # the username of the default user
+  pass: __ADMINPASS__ # the password of the default user
+passstrength: 10 # the bcrypt password strength (higher = better but also slower)
+uploadedimagesdir: data/images # the directory for storing uploaded images
+pluginsdir: data/plugins # the directory where plugin resides

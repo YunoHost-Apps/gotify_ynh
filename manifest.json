@@ -1,0 +1,78 @@
+{
+    "name": "Gotify",
+    "id": "gotify",
+    "packaging_format": 1,
+    "description": {
+        "en": "Gotify package for YunoHost.",
+        "fr": "Package Gotify pour YunoHost."
+    },
+    "version": "1.2.1",
+    "url": "http://gotify.net",
+    "license": "MIT",
+    "maintainer": {
+        "name": "plopoyop",
+        "email": "plopoyop@gmail.com"
+    },
+    "requirements": {
+        "yunohost": ">= 2.7.14"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx",
+        "mysql"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain name for gotify",
+                    "fr": "Choisissez un nom de domaine pour gotify"
+                },
+                "example": "example.com"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for gotify",
+                    "fr": "Choisissez un chemin pour gotify"
+                },
+                "example": "/gotify",
+                "default": "/gotify"
+            },
+            {
+                "name": "admin",
+                "type": "user",
+                "ask": {
+                    "en": "Choose an admin user",
+                    "fr": "Choisissez l’administrateur"
+                },
+                "example": "johndoe"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "ask": {
+                    "en": "Is it a public application?",
+                    "fr": "Est-ce une application publique ?"
+                },
+                "default": true
+            },
+            {
+                "name": "password",
+                "type": "password",
+                "ask": {
+                    "en": "Set the administrator password",
+                    "fr": "Définissez le mot de passe administrateur"
+                },
+                "help": {
+                    "en": "Use the help field to add an information for the admin about this question.",
+                    "fr": "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+                },
+                "example": "Choose a password"
+            }
+        ]
+    }
+}

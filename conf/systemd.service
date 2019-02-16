@@ -1,0 +1,14 @@
+[Unit]
+Description=Gotify
+After=network.target
+After=mysql.service
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__FINALPATH__/
+ExecStart=__FINALPATH__/gotify-linux-amd64
+
+[Install]
+WantedBy=multi-user.target

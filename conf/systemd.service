@@ -1,5 +1,5 @@
 [Unit]
-Description=Gotify
+Description=Gotify a simple server for sending and receiving messages
 After=network.target
 After=mysql.service
 

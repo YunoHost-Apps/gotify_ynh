@@ -1,4 +1,4 @@
-# Gitify for YunoHost
+# Gotify for YunoHost
 
 [![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=Gotify)
 

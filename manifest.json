@@ -3,8 +3,8 @@
     "id": "gotify",
     "packaging_format": 1,
     "description": {
-        "en": "Gotify package for YunoHost.",
-        "fr": "Package Gotify pour YunoHost."
+        "en": "A simple server for sending and receiving messages.",
+        "fr": "Un simple serveur pour envoyer et recevoir des messages."
     },
     "version": "1.2.1",
     "url": "http://gotify.net",
@@ -33,16 +33,6 @@
                 "example": "example.com"
             },
             {
-                "name": "path",
-                "type": "path",
-                "ask": {
-                    "en": "Choose a path for gotify",
-                    "fr": "Choisissez un chemin pour gotify"
-                },
-                "example": "/gotify",
-                "default": "/gotify"
-            },
-            {
                 "name": "admin",
                 "type": "user",
                 "ask": {
@@ -50,15 +40,6 @@
                     "fr": "Choisissez l’administrateur"
                 },
                 "example": "johndoe"
-            },
-            {
-                "name": "is_public",
-                "type": "boolean",
-                "ask": {
-                    "en": "Is it a public application?",
-                    "fr": "Est-ce une application publique ?"
-                },
-                "default": true
             },
             {
                 "name": "password",

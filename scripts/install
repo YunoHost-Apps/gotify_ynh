@@ -26,9 +26,9 @@ ynh_abort_if_errors
 #=================================================
 
 domain=$YNH_APP_ARG_DOMAIN
-path_url=$YNH_APP_ARG_PATH
+path_url=/
 admin=$YNH_APP_ARG_ADMIN
-is_public=$YNH_APP_ARG_IS_PUBLIC
+is_public=1
 password=$YNH_APP_ARG_PASSWORD
 
 ### If it's a multi-instance app, meaning it can be installed several times independently
@@ -52,12 +52,6 @@ test ! -e "$final_path" || ynh_die "This path already contains a folder"
 
 # Normalize the url path syntax
 path_url=$(ynh_normalize_url_path $path_url)
-
-# Does not work in subpath
-if [ "$path_url" != "/" ]
-then
-	ynh_die "Cannot be installed in subpath"
-fi
 
 # Check web path availability
 ynh_webpath_available $domain $path_url
@@ -127,11 +121,6 @@ ynh_setup_source "$final_path" $architecture
 ### `ynh_add_nginx_config` will use the file conf/nginx.conf
 
 # Create a dedicated nginx config
-if [ "$path_url" != "/" ]
-then
-	ynh_replace_string "^#sub_path_only" "" "../conf/nginx.conf"
-fi
-
 ynh_add_nginx_config
 
 #=================================================

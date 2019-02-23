@@ -15,7 +15,7 @@ server:
 
 database: # for database see (configure database section)
   dialect: mysql
-  connection: gotify:__DBPASS__@/__DBNAME__?charset=utf8&parseTime=True&loc=Local
+  connection: __APP__:__DBPASS__@/__DBNAME__?charset=utf8&parseTime=True&loc=Local
 
 defaultuser: # on database creation, gotify creates an admin user
   name: __ADMINUSER__ # the username of the default user

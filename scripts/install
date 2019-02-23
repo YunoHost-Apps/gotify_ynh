@@ -156,6 +156,7 @@ ynh_add_systemd_config
 ### `ynh_replace_string` is used to replace a string in a file.
 ### (It's compatible with sed regular expressions syntax)
 cp ../conf/config.yml "$final_path/config.yml"
+ynh_replace_string "__APP__" $app "$final_path/config.yml"
 ynh_replace_string "__PORT__" $port "$final_path/config.yml"
 ynh_replace_string "__DBNAME__" $db_name "$final_path/config.yml"
 ynh_replace_string "__DBPASS__" $db_pwd "$final_path/config.yml"

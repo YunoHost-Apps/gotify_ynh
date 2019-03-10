@@ -1,0 +1,6 @@
+SOURCE_URL=https://github.com/gotify/server/releases/download/v2.0.2/gotify-linux-arm64.zip
+SOURCE_SUM=93850b5518631ef26d8e86d6c0798cc0eeb1c0e00d9e48282fa7f09787bd6529
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=zip
+SOURCE_IN_SUBDIR=false
+SOURCE_FILENAME=gotify-linux-arm64

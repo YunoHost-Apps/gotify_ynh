@@ -1,5 +1,6 @@
 server:
   port: __PORT__ # the port the HTTP server will listen on
+  listenaddr: 127.0.0.1 # only listen for connections from local reverse proxy
 
   ssl:
     enabled: false # if https should be enabled

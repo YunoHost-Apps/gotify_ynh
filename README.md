@@ -1,7 +1,9 @@
 # Gotify for YunoHost
 
-[![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=Gotify)
+[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify)
+[![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=gotify)
 
+*[Lire ce readme en français.](./README_fr.md)*
 > *This package allow you to install Gotify quickly and simply on a YunoHost server.
 If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to know how to install and enjoy it.*
 
@@ -34,8 +36,6 @@ LDAP not supported.
 
  * No LDAP support (blocked until Gotify core upstream implements it)
 
- * is_public is ignored app can't be SSOed
-
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/gotify_ynh/issues
@@ -43,3 +43,16 @@ LDAP not supported.
  * YunoHost website: https://yunohost.org/
 
 ---
+
+Developers info
+----------------
+
+**Only if you want to use a testing branch for coding, instead of merging directly into master.**
+Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/gotify_ynh/tree/testing).
+
+To try the testing branch, please proceed like that.
+```
+sudo yunohost app install https://github.com/YunoHost-Apps/gotify_ynh/tree/testing --debug
+or
+sudo yunohost app upgrade REPLACEBYYOURAPP -u https://github.com/YunoHost-Apps/gotify_ynh/tree/testing --debug
+```

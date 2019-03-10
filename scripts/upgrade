@@ -107,6 +107,7 @@ ynh_system_user_create $app
 ynh_backup_if_checksum_is_different "$final_path/config.yml"
 
 cp ../conf/config.yml "$final_path/config.yml"
+ynh_replace_string "__APP__" $app "$final_path/config.yml"
 ynh_replace_string "__PORT__" $port "$final_path/config.yml"
 ynh_replace_string "__DBNAME__" $db_name "$final_path/config.yml"
 ynh_replace_string "__DBPASS__" $db_pwd "$final_path/config.yml"

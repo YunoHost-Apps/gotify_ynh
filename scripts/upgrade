@@ -134,11 +134,13 @@ ynh_add_systemd_config
 # Set permissions on app files
 chown -R root: $final_path
 
-# If data directory doesn't exists, create it and setup permissions
+# If data directory doesn't exists
 if [ -z $final_path/data ]; then
 	mkdir $final_path/data
-	chown -R $app $final_path/data
 fi
+
+# check data directory permission
+chown -R $app: $final_path/data
 
 #=================================================
 # SETUP SSOWAT

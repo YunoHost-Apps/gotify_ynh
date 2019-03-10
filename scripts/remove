@@ -12,6 +12,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 # LOAD SETTINGS
 #=================================================
+ynh_print_info "Loading installation settings..."
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -45,6 +46,7 @@ ynh_remove_systemd_config
 #=================================================
 # REMOVE THE MYSQL DATABASE
 #=================================================
+ynh_print_info "Removing the MySQL database"
 
 # Remove a database if it exists, along with the associated user
 ynh_mysql_remove_db $db_user $db_name
@@ -52,6 +54,7 @@ ynh_mysql_remove_db $db_user $db_name
 #=================================================
 # REMOVE APP MAIN DIR
 #=================================================
+ynh_print_info "Removing app main directory"
 
 # Remove the app directory securely
 ynh_secure_remove "$final_path"
@@ -59,6 +62,7 @@ ynh_secure_remove "$final_path"
 #=================================================
 # REMOVE NGINX CONFIGURATION
 #=================================================
+ynh_print_info "Removing nginx web server configuration"
 
 # Remove the dedicated nginx config
 ynh_remove_nginx_config
@@ -100,6 +104,9 @@ ynh_remove_nginx_config
 #=================================================
 # REMOVE DEDICATED USER
 #=================================================
+ynh_print_info "Removing the dedicated system user"
 
 # Delete a system user
 ynh_system_user_delete $app
+
+ynh_print_info "Removal of $app completed"

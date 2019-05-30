@@ -6,7 +6,7 @@
         "en": "A simple server for sending and receiving messages.",
         "fr": "Un simple serveur pour envoyer et recevoir des messages."
     },
-    "version": "2.0.5~ynh1",
+    "version": "2.0.5~ynh2",
     "url": "http://gotify.net",
     "license": "MIT",
     "maintainer": {

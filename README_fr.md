@@ -12,7 +12,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 ## Vue d'ensemble
 Gotify est un simple serveur permettant d'envoyer et de recevoir des messages via websocket.
 
-**Version incluse:** 2.0.5
+**Version incluse:** 2.0.8
 
 ## Captures d'écran
 

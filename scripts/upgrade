@@ -153,7 +153,12 @@ chown -R $app: $final_path/data
 #=================================================
 ynh_print_info "Upgrading SSOwat configuration..."
 
-ynh_app_setting_set $app unprotected_uris "/"
+unprotected_uris=$(ynh_app_setting_get --app=$app --key=unprotected_uris)
+if [ ! -z "$unprotected_uris" ]; then
+    ynh_app_setting_delete --app=$app --key=unprotected_uris
+fi
+
+ynh_permission_update --permission "main" --add visitors
 
 #=================================================
 # RELOAD SERVICE

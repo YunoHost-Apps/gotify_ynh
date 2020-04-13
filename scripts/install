@@ -153,7 +153,7 @@ yunohost service add $app
 ynh_print_info "Configuring SSOwat..."
 
 # Make app public if necessary
-ynh_app_setting_set $app unprotected_uris "/"
+ynh_permission_update --permission "main" --add visitors
 
 #=================================================
 # RELOAD NGINX

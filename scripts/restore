@@ -86,7 +86,6 @@ chown -R $app: $final_path/data/
 #=================================================
 
 yunohost service add $app
-# --log "/var/log/$app/APP.log"
 
 #=================================================
 # RESTORE SYSTEMD

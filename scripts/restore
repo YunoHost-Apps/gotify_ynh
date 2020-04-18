@@ -19,7 +19,7 @@ ynh_abort_if_errors
 #=================================================
 # LOAD SETTINGS
 #=================================================
-ynh_print_info "Loading settings..."
+ynh_script_progression --message="Loading settings.."
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -31,7 +31,7 @@ db_name=$(ynh_app_setting_get $app db_name)
 #=================================================
 # CHECK IF THE APP CAN BE RESTORED
 #=================================================
-ynh_print_info "Validating restoration parameters..."
+ynh_script_progression --message="Validating restoration parameters.." --weight=1
 
 ynh_webpath_available $domain $path_url \
 	|| ynh_die "Path not available: ${domain}${path_url}"
@@ -43,21 +43,21 @@ test ! -d $final_path \
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
 #=================================================
-ynh_print_info "Restoring nginx configuration..."
+ynh_script_progression --message="Restoring nginx configuration..." --weight=1
 
 ynh_restore_file "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 #=================================================
 # RESTORE THE APP MAIN DIR
 #=================================================
-ynh_print_info "Restoring the app main directory..."
+ynh_script_progression --message="Restoring the app main directory.." --weight=1
 
 ynh_restore_file "$final_path"
 
 #=================================================
 # RESTORE THE MYSQL DATABASE
 #=================================================
-ynh_print_info "Restoring the MySQL database..."
+ynh_script_progression --message="Restoring the MySQL database.." --weight=20
 
 db_pwd=$(ynh_app_setting_get $app mysqlpwd)
 ynh_mysql_setup_db $db_name $db_name $db_pwd
@@ -66,7 +66,7 @@ ynh_mysql_connect_as $db_name $db_pwd $db_name < ./db.sql
 #=================================================
 # RECREATE THE DEDICATED USER
 #=================================================
-ynh_print_info "Recreating the dedicated system user..."
+ynh_script_progression --message="Recreating the dedicated system user.." --weight=1
 
 # Create the dedicated user (if not existing)
 ynh_system_user_create $app
@@ -86,12 +86,11 @@ chown -R $app: $final_path/data/
 #=================================================
 
 yunohost service add $app
-# --log "/var/log/$app/APP.log"
 
 #=================================================
 # RESTORE SYSTEMD
 #=================================================
-ynh_print_info "Restoring service..."
+ynh_script_progression --message="Restoring service..." --weight=10
 
 ynh_restore_file "/etc/systemd/system/$app.service"
 systemctl enable $app.service
@@ -99,8 +98,8 @@ systemctl start $app
 #=================================================
 # GENERIC FINALIZATION
 #=================================================
-ynh_print_info "Reloading nginx web server..."
+ynh_script_progression --message="Reloading nginx web server ..." --weight=1
 
 systemctl reload nginx
 
-ynh_print_info "Restoration completed for $app"
+ynh_script_progression --message="Restoration completed for $app" --last

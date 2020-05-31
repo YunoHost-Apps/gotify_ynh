@@ -139,7 +139,10 @@ ynh_store_file_checksum "$final_path/config.yml"
 # Set permissions to app files
 chown -R root: $final_path
 mkdir $final_path/data
+chown -R root:$app $final_path/*
+chmod -R 550 $final_path/*
 chown $app $final_path/data
+chmod 770 $final_path/data
 
 #=================================================
 # ADVERTISE SERVICE IN ADMIN PANEL
@@ -164,3 +167,4 @@ systemctl reload nginx
 
 systemctl start $app
 ynh_script_progression --message="Installation of $app completed" --last
+ynh_print_warn "Change the admin password after the first login or delete it in the config file (stored in plain text)"

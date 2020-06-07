@@ -76,8 +76,10 @@ ynh_system_user_create $app
 #=================================================
 
 # Restore permissions on app files
-chown -R root: $final_path
+chown -R root:$app $final_path
+mkdir $final_path/data
 chown -R $app: $final_path/data/
+chmod o-rwx $final_path/ -R
 
 #=================================================
 # SPECIFIC RESTORATION

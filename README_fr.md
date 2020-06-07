@@ -37,9 +37,7 @@ Pas de support de LDAP
 
  * Pas de support de LDAP (non implémenté upstream)
 
-## Links
-
-## Links
+## Liens
 
  * Signaler un bug: https://github.com/YunoHost-Apps/gotify_ynh/issues
  * Site de l'application: https://gotify.net/

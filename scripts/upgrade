@@ -138,7 +138,9 @@ ynh_add_systemd_config
 #=================================================
 
 # Set permissions on app files
-chown -R root: $final_path
+chown -R root:$app $final_path/
+chown -R $app: $final_path/data/
+chmod o-rwx $final_path/ -R
 
 # If data directory doesn't exists
 if [ -z $final_path/data ]; then

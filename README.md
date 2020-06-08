@@ -1,9 +1,10 @@
 # Gotify for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify)
+[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)  
 [![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=gotify)
 
 *[Lire ce readme en français.](./README_fr.md)*
+
 > *This package allow you to install Gotify quickly and simply on a YunoHost server.
 If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to know how to install and enjoy it.*
 
@@ -16,7 +17,6 @@ Gotify is a simple server for sending and receiving messages in real-time per we
 
 [![Screenshot](https://raw.githubusercontent.com/gotify/server/master/ui.png)](https://github.com/gotify/server)
 
-
 ## Configuration
 
 How to configure this app:
@@ -24,22 +24,22 @@ How to configure this app:
 
 ## Documentation
 
- * Official documentation: [here](https://gotify.net/docs/index)
+ * Official documentation: https://gotify.net/docs/index
+ * YunoHost documentation: https://yunohost.org/#/app_gotify
 
 #### Multi-users support
 
-LDAP not supported.
+LDAP is not supported (blocked until Gotify core upstream implements it).
 
 ## Limitations
 
  * Require dedicated domain like gotify.domain.tld.
 
- * No LDAP support (blocked until Gotify core upstream implements it)
-
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/gotify_ynh/issues
  * App website: https://gotify.net/
+ * Upstream app repository: https://github.com/gotify/server
  * YunoHost website: https://yunohost.org/
 
 ---
@@ -47,7 +47,6 @@ LDAP not supported.
 Developers info
 ----------------
 
-**Only if you want to use a testing branch for coding, instead of merging directly into master.**
 Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/gotify_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.

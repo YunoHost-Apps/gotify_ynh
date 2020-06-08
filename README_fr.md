@@ -1,6 +1,6 @@
 # Gotify pour YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify)
+[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)  
 [![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=gotify)
 
 
@@ -10,9 +10,9 @@
 Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
-Gotify est un simple serveur permettant d'envoyer et de recevoir des messages via websocket.
+Gotify est un serveur simple permettant d'envoyer et de recevoir des messages via websocket.
 
-**Version incluse:** 2.0.16
+**Version incluse :** 2.0.16
 
 ## Captures d'écran
 
@@ -25,30 +25,29 @@ Pour configurer Gotify :
 
 ## Documentation
 
- * Documentation officielle: [ici](https://gotify.net/docs/index)
+ * Documentation officielle : https://gotify.net/docs/index
+ * Documentation YunoHost : https://yunohost.org/#/app_gotify_fr
 
 #### Support multi-utilisateurs
 
-Pas de support de LDAP
+Pas de support de LDAP (non implémenté upstream)
 
 ## Limitations
 
- * necessite un domaine dédié par exemple gotify.domain.tld.
-
- * Pas de support de LDAP (non implémenté upstream)
+ * Nécessite un domaine dédié comme par exemple gotify.domain.tld.
 
 ## Liens
 
- * Signaler un bug: https://github.com/YunoHost-Apps/gotify_ynh/issues
- * Site de l'application: https://gotify.net/
- * Site web YunoHost: https://yunohost.org/
+ * Signaler un bug : https://github.com/YunoHost-Apps/gotify_ynh/issues
+ * Site de l'application : https://gotify.net/
+ * Dépôt de l'application principale : https://github.com/gotify/server
+ * Site web YunoHost : https://yunohost.org/
 
 ---
 
 Informations pour les développeurs
 ----------------
 
-**Seulement si vous voulez utiliser une branche de test pour le codage, au lieu de fusionner directement dans la banche principale.**
 Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/gotify_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.

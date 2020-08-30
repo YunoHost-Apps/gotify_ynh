@@ -107,6 +107,7 @@ ynh_system_user_create $app
 #=================================================
 
 # Create a dedicated systemd config
+ynh_replace_string "__ARCHITECTURE__" $architecture "../conf/systemd.service"
 ynh_add_systemd_config
 
 #=================================================

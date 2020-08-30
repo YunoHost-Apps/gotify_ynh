@@ -12,10 +12,12 @@ ynh_delete_file_checksum () {
 	ynh_app_setting_delete $app $checksum_setting_name
 }
 
-if [ -n "$(uname -m | grep 64)" ]; then
+if [ -n "$(uname -m | grep arm64)" ] || [ -n "$(uname -m | grep aarch64)" ]; then
+	architecture="arm64"
+elif [ -n "$(uname -m | grep 64)" ]; then
 	architecture="amd64"
 elif [ -n "$(uname -m | grep arm)" ]; then
-	architecture="arm"
+	architecture="arm-7"
 else
 	ynh_die "Unable to detect your achitecture, please open a bug describing \
         your hardware and the result of the command \"uname -m\"." 1

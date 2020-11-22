@@ -6,7 +6,7 @@
         "en": "A simple server for sending and receiving messages.",
         "fr": "Un simple serveur pour envoyer et recevoir des messages."
     },
-    "version": "2.0.16~ynh2",
+    "version": "2.0.16~ynh3",
     "url": "http://gotify.net",
     "license": "MIT",
     "maintainer": {
@@ -14,7 +14,7 @@
         "email": "plopoyop@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 3.7.0"
+        "yunohost": ">= 3.8.1"
     },
     "multi_instance": true,
     "services": [

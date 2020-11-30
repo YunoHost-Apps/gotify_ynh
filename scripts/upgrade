@@ -88,7 +88,7 @@ ynh_setup_source "$final_path" $architecture
 #=================================================
 ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=2
 
-# Create a dedicated nginx config
+# Create a dedicated NGINX config
 if [ "$path_url" != "/" ]
 then
 	ynh_replace_string "^#sub_path_only" "" "../conf/nginx.conf"
@@ -179,6 +179,10 @@ systemctl restart $app
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
-systemctl reload nginx
+ynh_systemd_action --service_name=nginx --action=reload
+
+#=================================================
+# END OF SCRIPT
+#=================================================
 
 ynh_script_progression --message="Upgrade of $app completed" --last

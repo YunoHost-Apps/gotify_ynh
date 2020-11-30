@@ -95,13 +95,13 @@ yunohost service add $app
 ynh_script_progression --message="Restoring service..." --weight=10
 
 ynh_restore_file "/etc/systemd/system/$app.service"
-systemctl enable $app.service
+systemctl enable $app.service --quiet
 systemctl start $app
 
 #=================================================
 # GENERIC FINALIZATION
 #=================================================
-ynh_script_progression --message="Reloading NGINX web server ..." --weight=1
+ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 systemctl reload nginx
 

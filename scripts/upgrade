@@ -86,9 +86,9 @@ ynh_setup_source "$final_path" $architecture
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading nginx web server configuration..." --weight=2
+ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=2
 
-# Create a dedicated nginx config
+# Create a dedicated NGINX config
 if [ "$path_url" != "/" ]
 then
 	ynh_replace_string "^#sub_path_only" "" "../conf/nginx.conf"
@@ -108,8 +108,6 @@ ynh_system_user_create $app
 # SPECIFIC UPGRADE
 #=================================================
 
-### Verify the checksum of a file, stored by `ynh_store_file_checksum` in the install script.
-### And create a backup of this file if the checksum is different. So the file will be backed up if the admin had modified it.
 ynh_backup_if_checksum_is_different "$final_path/config.yml"
 
 cp ../conf/config.yml "$final_path/config.yml"
@@ -129,6 +127,7 @@ ynh_store_file_checksum "$final_path/config.yml"
 #=================================================
 
 # Create a dedicated systemd config
+ynh_replace_string "__ARCHITECTURE__" $architecture "../conf/systemd.service"
 ynh_add_systemd_config
 
 #=================================================
@@ -149,6 +148,12 @@ fi
 
 # check data directory permission
 chown -R $app: $final_path/data
+
+#=================================================
+# ADVERTISE SERVICE IN ADMIN PANEL
+#=================================================
+
+yunohost service add $app
 
 #=================================================
 # SETUP SSOWAT
@@ -172,8 +177,12 @@ systemctl restart $app
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..." --weight=1
+ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
-systemctl reload nginx
+ynh_systemd_action --service_name=nginx --action=reload
+
+#=================================================
+# END OF SCRIPT
+#=================================================
 
 ynh_script_progression --message="Upgrade of $app completed" --last

@@ -8,7 +8,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/gotify-linux-amd64
+ExecStart=__FINALPATH__/gotify-linux-__ARCHITECTURE__
 
 [Install]
 WantedBy=multi-user.target

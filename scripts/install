@@ -16,7 +16,6 @@ source /usr/share/yunohost/helpers
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
 
-
 #=================================================
 # RETRIEVE ARGUMENTS FROM THE MANIFEST
 #=================================================
@@ -70,7 +69,7 @@ ynh_app_setting_set $app port $port
 #=================================================
 # CREATE A MYSQL DATABASE
 #=================================================
-ynh_script_progression --message="Creating a MySQL database..." --weight=20
+ynh_script_progression --message="Creating a MySQL database..." --weight=10
 
 db_name=$(ynh_sanitize_dbid $app)
 ynh_app_setting_set $app db_name $db_name
@@ -88,7 +87,7 @@ ynh_setup_source "$final_path" $architecture
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring nginx web server..." --weight=2
+ynh_script_progression --message="Configuring NGINX web server..." --weight=2
 
 # Create a dedicated nginx config
 ynh_add_nginx_config
@@ -101,12 +100,12 @@ ynh_script_progression --message="Configuring system user..." --weight=2
 # Create a system user
 ynh_system_user_create $app
 
-
 #=================================================
 # SETUP SYSTEMD
 #=================================================
 
 # Create a dedicated systemd config
+ynh_replace_string "__ARCHITECTURE__" $architecture "../conf/systemd.service"
 ynh_add_systemd_config
 
 #=================================================
@@ -159,7 +158,7 @@ ynh_permission_update --permission "main" --add visitors
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..." --weight=1
+ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 systemctl reload nginx
 

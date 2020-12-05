@@ -3,7 +3,6 @@
 [![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)  
 [![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=gotify)
 
-
 *[Read this readme in english.](./README.md)*
 
 > *Ce package vous permet d'installer Gotify rapidement et simplement sur un serveur Yunohost.
@@ -21,7 +20,7 @@ Gotify est un serveur simple permettant d'envoyer et de recevoir des messages vi
 ## Configuration
 
 Pour configurer Gotify :
-> Edit config.yml file via SSH.
+> Éditer le fichier `config.yml` avec SSH.
 
 ## Documentation
 
@@ -34,7 +33,7 @@ Pas de support de LDAP (non implémenté upstream)
 
 ## Limitations
 
- * Nécessite un domaine dédié comme par exemple gotify.domain.tld.
+ * Nécessite un domaine dédié comme par exemple `gotify.domain.tld`
 
 ## Liens
 
@@ -45,8 +44,7 @@ Pas de support de LDAP (non implémenté upstream)
 
 ---
 
-Informations pour les développeurs
-----------------
+## Informations pour les développeurs
 
 Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/gotify_ynh/tree/testing).
 

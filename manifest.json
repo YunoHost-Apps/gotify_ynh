@@ -33,6 +33,16 @@
                 "example": "example.com"
             },
             {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for Gotify",
+                    "fr": "Choisissez un chemin pour Gotify"
+                },
+                "example": "/gotify",
+                "default": "/gotify"
+            },
+            {
                 "name": "admin",
                 "type": "user",
                 "ask": {

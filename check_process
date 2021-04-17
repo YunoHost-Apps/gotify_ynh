@@ -6,12 +6,13 @@
 ;; Test complet
 	; Manifest
 		domain="domain.tld"	(DOMAIN)
+		path="/path"    (PATH)
 		admin="john"	(USER)
 		password="pass"
 		port="666"	(PORT)
 	; Checks
 		pkg_linter=1
-		setup_sub_dir=0
+		setup_sub_dir=1
 		setup_root=1
 		setup_nourl=0
 		setup_private=0

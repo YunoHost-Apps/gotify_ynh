@@ -20,7 +20,7 @@ Gotify is a simple server for sending and receiving messages in real-time per we
 ## Configuration
 
 How to configure this app:
-> Edit config.yml file via SSH.
+> Edit `config.yml` file via SSH.
 
 ## Documentation
 
@@ -33,7 +33,7 @@ LDAP is not supported (blocked until Gotify core upstream implements it).
 
 ## Limitations
 
- * Require dedicated domain like gotify.domain.tld.
+ * Require dedicated domain like `gotify.domain.tld`
 
 ## Links
 
@@ -44,8 +44,7 @@ LDAP is not supported (blocked until Gotify core upstream implements it).
 
 ---
 
-Developers info
-----------------
+## Developers info
 
 Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/gotify_ynh/tree/testing).
 

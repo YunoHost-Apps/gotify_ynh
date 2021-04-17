@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/gotify/server/releases/download/v2.0.16/gotify-linux-arm-7.zip
-SOURCE_SUM=62cd54303a79af678a77b8591836851c31cebf83c48392fd149007ba39926691
+SOURCE_URL=https://github.com/gotify/server/releases/download/v2.0.22/gotify-linux-arm-7.zip
+SOURCE_SUM=2f7a0133a17274a8d919fa438f1ddeb4054612b1bcf9b47773a405e490bb0ed0
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=false

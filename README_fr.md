@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 ## Vue d'ensemble
 Gotify est un serveur simple permettant d'envoyer et de recevoir des messages via websocket.
 
-**Version incluse :** 2.0.20
+**Version incluse :** 2.0.22
 
 ## Captures d'écran
 
@@ -30,10 +30,6 @@ Pour configurer Gotify :
 #### Support multi-utilisateurs
 
 Pas de support de LDAP (non implémenté upstream)
-
-## Limitations
-
- * Nécessite un domaine dédié comme par exemple `gotify.domain.tld`
 
 ## Liens
 

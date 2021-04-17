@@ -31,10 +31,6 @@ How to configure this app:
 
 LDAP is not supported (blocked until Gotify core upstream implements it).
 
-## Limitations
-
- * Require dedicated domain like `gotify.domain.tld`
-
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/gotify_ynh/issues

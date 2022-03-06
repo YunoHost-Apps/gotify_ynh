@@ -11,7 +11,7 @@ If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to
 ## Overview
 Gotify is a simple server for sending and receiving messages in real-time per web socket. (Includes a sleek web-ui)
 
-**Shipped version:** 2.0.22
+**Shipped version:** 2.1.4
 
 ## Screenshots
 
@@ -30,10 +30,6 @@ How to configure this app:
 #### Multi-users support
 
 LDAP is not supported (blocked until Gotify core upstream implements it).
-
-## Limitations
-
- * Require dedicated domain like `gotify.domain.tld`
 
 ## Links
 

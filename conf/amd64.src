@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/gotify/server/releases/download/v2.0.22/gotify-linux-amd64.zip
-SOURCE_SUM=30801ea636d428630ea1380a7853eb85ba5dee74d4d757b0d51d5646af02fbf7
+SOURCE_URL=https://github.com/gotify/server/releases/download/v2.1.4/gotify-linux-amd64.zip
+SOURCE_SUM=98b126e5d934d45b1390b1a1b9136e7690518bfdbb731a75a45a55e86291af4b
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=false

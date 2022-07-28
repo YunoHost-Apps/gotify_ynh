@@ -6,15 +6,21 @@
         "en": "A simple server for sending and receiving messages.",
         "fr": "Un simple serveur pour envoyer et recevoir des messages."
     },
-    "version": "2.1.4~ynh1",
+    "version": "2.1.4~ynh2",
     "url": "http://gotify.net",
+    "upstream": {
+        "license": "MIT",
+        "website": "http://gotify.net",
+        "admindoc": "https://gotify.net/docs/index",
+        "code": "https://github.com/gotify/server"
+    },
     "license": "MIT",
     "maintainer": {
         "name": "plopoyop",
         "email": "plopoyop@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 3.8.1"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
@@ -22,34 +28,20 @@
         "mysql"
     ],
     "arguments": {
-        "install" : [
+        "install": [
             {
                 "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain name for gotify",
-                    "fr": "Choisissez un nom de domaine pour gotify"
-                },
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",
                 "type": "path",
-                "ask": {
-                    "en": "Choose a path for Gotify",
-                    "fr": "Choisissez un chemin pour Gotify"
-                },
                 "example": "/gotify",
                 "default": "/gotify"
             },
             {
                 "name": "admin",
-                "type": "user",
-                "ask": {
-                    "en": "Choose an admin user",
-                    "fr": "Choisissez l’administrateur"
-                },
-                "example": "johndoe"
+                "type": "user"
             },
             {
                 "name": "password",

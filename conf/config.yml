@@ -12,11 +12,11 @@ server:
 
 database: # for database see (configure database section)
   dialect: mysql
-  connection: __APP__:__DBPASS__@unix(/var/run/mysqld/mysqld.sock)/__DBNAME__?charset=utf8&parseTime=True&loc=Local
+  connection: __DB_USER__:__DB_PWD__@unix(/var/run/mysqld/mysqld.sock)/__DB_NAME__?charset=utf8&parseTime=True&loc=Local
 
 defaultuser: # on database creation, gotify creates an admin user
-  name: __ADMINUSER__ # the username of the default user
-  pass: __ADMINPASS__ # the password of the default user
+  name: __ADMIN__ # the username of the default user
+  pass: __PASSWORD__ # the password of the default user
 passstrength: 12 # the bcrypt password strength (higher = better but also slower)
 uploadedimagesdir: data/images # the directory for storing uploaded images
 pluginsdir: data/plugins # the directory where plugin resides

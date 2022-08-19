@@ -19,6 +19,8 @@
 		setup_public=0
 		upgrade=1
 		upgrade=1	from_commit=e0fbbb9a6d2fd87b4d42e85c0fc8f4e479689abc
+		# 2.1.4~ynh1
+		upgrade=1	from_commit=28288aaf8c675b5c4f9b738bf099e242a48bd27f
 		backup_restore=1
 		multi_instance=1
 		port_already_use=1

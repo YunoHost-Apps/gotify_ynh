@@ -1,6 +1,7 @@
-SOURCE_URL=https://github.com/gotify/server/releases/download/v2.1.4/gotify-linux-amd64.zip
-SOURCE_SUM=98b126e5d934d45b1390b1a1b9136e7690518bfdbb731a75a45a55e86291af4b
+SOURCE_URL=https://github.com/gotify/server/releases/download/v2.1.5/gotify-linux-amd64.zip
+SOURCE_SUM=aa561afe5b7925d2abeb32eaf3dfd6fc8113166e71027b9421734715fa62e65d
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=false
-SOURCE_FILENAME=gotify-linux-amd64
+SOURCE_FILENAME=
+SOURCE_EXTRACT=true

@@ -1,0 +1,7 @@
+SOURCE_URL=https://github.com/gotify/server/releases/download/v2.1.7/gotify-linux-386.zip
+SOURCE_SUM=03ed0ace3065985c81531fc2f09ae3ee33e56bc86c6aff63603bea71c4f260f4
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=zip
+SOURCE_IN_SUBDIR=false
+SOURCE_FILENAME=
+SOURCE_EXTRACT=true

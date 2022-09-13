@@ -3,8 +3,8 @@
     "id": "gotify",
     "packaging_format": 1,
     "description": {
-        "en": "A simple server for sending and receiving messages.",
-        "fr": "Un simple serveur pour envoyer et recevoir des messages."
+        "en": "Simple server for sending and receiving messages",
+        "fr": "Simple serveur pour envoyer et recevoir des messages"
     },
     "version": "2.1.7~ynh1",
     "url": "http://gotify.net",
@@ -45,12 +45,7 @@
             },
             {
                 "name": "password",
-                "type": "password",
-                "ask": {
-                    "en": "Set the administrator password",
-                    "fr": "Définissez le mot de passe administrateur"
-                },
-                "example": "Choose a password"
+                "type": "password"
             }
         ]
     }

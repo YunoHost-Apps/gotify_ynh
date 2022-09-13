@@ -5,11 +5,10 @@
 
 ;; Test complet
 	; Manifest
-		domain="domain.tld"	(DOMAIN)
-		path="/path"    (PATH)
-		admin="john"	(USER)
-		password="pass"
-		port="666"	(PORT)
+		domain="domain.tld"
+		path="/path"
+		admin="john"
+		password="1Strong-Password"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
@@ -18,14 +17,12 @@
 		setup_private=0
 		setup_public=0
 		upgrade=1
-		upgrade=1	from_commit=e0fbbb9a6d2fd87b4d42e85c0fc8f4e479689abc
-		# 2.1.4~ynh1
-		upgrade=1	from_commit=28288aaf8c675b5c4f9b738bf099e242a48bd27f
+		# 2.1.4~ynh2
+		upgrade=1	from_commit=05cdef939dfb64e3a00c0f831ef6ef5dab109053
 		backup_restore=1
 		multi_instance=1
-		port_already_use=1
 		change_url=1
 ;;; Upgrade options
-	; commit=e0fbbb9a6d2fd87b4d42e85c0fc8f4e479689abc
-		name=Mon Feb 18 21:55:49 2019 +0100 Merge branch 'master' of github.com:YunoHost-Apps/gotify_ynh
+	; commit=05cdef939dfb64e3a00c0f831ef6ef5dab109053
+		name=Merge pull request #39 from YunoHost-Apps/testing
 		manifest_arg=domain=DOMAIN&admin=USER&password=pass&port=666&path=/&is_public=1

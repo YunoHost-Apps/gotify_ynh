@@ -1,8 +1,3 @@
-# See here for more information
-# https://github.com/YunoHost/package_check#syntax-check_process-file
-
-# Move this file from check_process.default to check_process when you have filled it.
-
 ;; Test complet
 	; Manifest
 		domain="domain.tld"
@@ -21,7 +16,11 @@
 		upgrade=1	from_commit=05cdef939dfb64e3a00c0f831ef6ef5dab109053
 		backup_restore=1
 		multi_instance=1
+		port_already_use=0
 		change_url=1
+;;; Options
+Email=
+Notification=none
 ;;; Upgrade options
 	; commit=05cdef939dfb64e3a00c0f831ef6ef5dab109053
 		name=Merge pull request #39 from YunoHost-Apps/testing

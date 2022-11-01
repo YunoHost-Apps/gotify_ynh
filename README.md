@@ -20,7 +20,6 @@ Gotify is a simple server for sending and receiving messages in real-time per we
 
 **Shipped version:** 2.1.7~ynh1
 
-
 ## Screenshots
 
 ![Screenshot of Gotify](./doc/screenshots/ui.png)

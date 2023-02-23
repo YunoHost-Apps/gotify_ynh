@@ -5,24 +5,25 @@ It shall NOT be edited by hand.
 
 # Gotify pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+
 [![Installer Gotify avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Gotify rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Gotify rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Gotify est un serveur simple permettant d'envoyer et de recevoir des messages via websocket.
 
 
 **Version incluse :** 2.2.4~ynh1
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Gotify](./doc/screenshots/ui.png)
+![Capture d’écran de Gotify](./doc/screenshots/ui.png)
 
 ## Avertissements / informations importantes
 
@@ -33,9 +34,9 @@ Pour configurer Gotify :
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <http://gotify.net>
-* Documentation officielle de l'admin : <https://gotify.net/docs/index>
-* Dépôt de code officiel de l'app : <https://github.com/gotify/server>
+* Site officiel de l’app : <http://gotify.net>
+* Documentation officielle de l’admin : <https://gotify.net/docs/index>
+* Dépôt de code officiel de l’app : <https://github.com/gotify/server>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_gotify>
 * Signaler un bug : <https://github.com/YunoHost-Apps/gotify_ynh/issues>
 
@@ -51,4 +52,4 @@ ou
 sudo yunohost app upgrade gotify -u https://github.com/YunoHost-Apps/gotify_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

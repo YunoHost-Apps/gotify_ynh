@@ -25,13 +25,6 @@ Gotify est un serveur simple permettant d'envoyer et de recevoir des messages vi
 
 ![Capture d’écran de Gotify](./doc/screenshots/ui.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-Pour configurer Gotify :
-> Éditer le fichier `config.yml` avec SSH.
-
 ## Documentations et ressources
 
 * Site officiel de l’app : <http://gotify.net>

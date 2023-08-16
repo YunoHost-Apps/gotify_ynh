@@ -12,19 +12,19 @@ source /usr/share/yunohost/helpers
 #=================================================
 # LOAD SETTINGS
 #=================================================
-ynh_script_progression --message="Loading installation settings..." --weight=1
+#REMOVEME? ynh_script_progression --message="Loading installation settings..." --weight=1
 
-app=$YNH_APP_INSTANCE_NAME
+#REMOVEME? app=$YNH_APP_INSTANCE_NAME
 
-domain=$(ynh_app_setting_get --app=$app --key=domain)
-path_url=$(ynh_app_setting_get --app=$app --key=path)
-admin=$(ynh_app_setting_get --app=$app --key=admin)
-final_path=$(ynh_app_setting_get --app=$app --key=final_path)
-db_name=$(ynh_app_setting_get --app=$app --key=db_name)
-db_user=$db_name
-db_pwd=$(ynh_app_setting_get --app=$app --key=mysqlpwd)
-port=$(ynh_app_setting_get --app=$app --key=port)
-password=$(ynh_app_setting_get --app=$app --key=password)
+#REMOVEME? domain=$(ynh_app_setting_get --app=$app --key=domain)
+#REMOVEME? path=$(ynh_app_setting_get --app=$app --key=path)
+#REMOVEME? admin=$(ynh_app_setting_get --app=$app --key=admin)
+#REMOVEME? #REMOVEME? install_dir=$(ynh_app_setting_get --app=$app --key=install_dir)
+#REMOVEME? db_name=$(ynh_app_setting_get --app=$app --key=db_name)
+#REMOVEME? db_user=$db_name
+#REMOVEME? db_pwd=$(ynh_app_setting_get --app=$app --key=mysqlpwd)
+#REMOVEME? port=$(ynh_app_setting_get --app=$app --key=port)
+#REMOVEME? password=$(ynh_app_setting_get --app=$app --key=password)
 
 #=================================================
 # CHECK VERSION
@@ -36,17 +36,17 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 # BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
 #=================================================
-ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=30
+#REMOVEME? ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=30
 
 # Backup the current version of the app
-ynh_backup_before_upgrade
-ynh_clean_setup () {
+#REMOVEME? ynh_backup_before_upgrade
+#REMOVEME? ynh_clean_setup () {
 	ynh_clean_check_starting
 	# Restore it if the upgrade fails
-	ynh_restore_upgradebackup
+#REMOVEME? 	ynh_restore_upgradebackup
 }
 # Exit if an error occurs during the execution of the script
-ynh_abort_if_errors
+#REMOVEME? ynh_abort_if_errors
 
 #=================================================
 # STANDARD UPGRADE STEPS
@@ -65,30 +65,30 @@ ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 # If db_name doesn't exist, create it
 if [ -z $db_name ]; then
 	db_name=$(ynh_sanitize_dbid $app)
-	ynh_app_setting_set $app db_name $db_name
+#REMOVEME? 	ynh_app_setting_set $app db_name $db_name
 fi
 
-# If final_path doesn't exist, create it
-if [ -z $final_path ]; then
-	final_path=/opt/yunohost/$app
-	ynh_app_setting_set $app final_path $final_path
+# If install_dir doesn't exist, create it
+if [ -z $install_dir ]; then
+#REMOVEME? 	install_dir=/opt/yunohost/$app
+#REMOVEME? 	ynh_app_setting_set $app install_dir $install_dir
 fi
 
 # If data directory doesn't exists
-if [ -z $final_path/data ]; then
-	mkdir $final_path/data
+if [ -z $install_dir/data ]; then
+	mkdir $install_dir/data
 fi
 
 # check data directory permission
-chown -R $app: $final_path/data
+chown -R $app: $install_dir/data
 
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
-ynh_script_progression --message="Making sure dedicated system user exists..." --weight=2
+#REMOVEME? ynh_script_progression --message="Making sure dedicated system user exists..." --weight=2
 
 # Create a dedicated user (if not existing)
-ynh_system_user_create --username=$app --home_dir="$final_path"
+#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -99,12 +99,12 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path" --source_id="$YNH_ARCH"
+	ynh_setup_source --dest_dir="$install_dir" 
 fi
 
-chmod 750 "$final_path"
-chmod -R o-rwx "$final_path"
-chown -R $app:www-data "$final_path"
+chmod 750 "$install_dir"
+chmod -R o-rwx "$install_dir"
+chown -R $app:www-data "$install_dir"
 
 #=================================================
 # NGINX CONFIGURATION
@@ -121,10 +121,10 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Updating a configuration file..." --weight=1
 
-ynh_add_config --template="../conf/config.yml" --destination="$final_path/config.yml"
+ynh_add_config --template="../conf/config.yml" --destination="$install_dir/config.yml"
 
-chmod 400 "$final_path/config.yml"
-chown $app:$app "$final_path/config.yml"
+chmod 400 "$install_dir/config.yml"
+chown $app:$app "$install_dir/config.yml"
 
 #=================================================
 # SETUP SYSTEMD
@@ -154,9 +154,9 @@ ynh_systemd_action --service_name=$app --action="start"
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading NGINX web server..." --weight=1
+#REMOVEME? ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
-ynh_systemd_action --service_name=nginx --action=reload
+#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

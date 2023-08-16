@@ -7,8 +7,8 @@ After=mysql.service
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/gotify-linux-__ARCHITECTURE__
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/gotify-linux-__ARCHITECTURE__
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these

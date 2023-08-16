@@ -16,7 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Gotify is a simple server for sending and receiving messages in real-time per web socket. (Includes a sleek web-ui)
+Gotify is a simple server for sending and receiving messages in real-time per web socket.
 
 
 **Shipped version:** 2.3.0~ynh1
@@ -24,13 +24,6 @@ Gotify is a simple server for sending and receiving messages in real-time per we
 ## Screenshots
 
 ![Screenshot of Gotify](./doc/screenshots/ui.png)
-
-## Disclaimers / important information
-
-## Configuration
-
-How to configure this app:
-> Edit `config.yml` file via SSH.
 
 ## Documentation and resources
 

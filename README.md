@@ -19,7 +19,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 Gotify is a simple server for sending and receiving messages in real-time per web socket. (Includes a sleek web-ui)
 
 
-**Shipped version:** 2.2.4~ynh1
+**Shipped version:** 2.3.0~ynh1
 
 ## Screenshots
 

@@ -25,39 +25,6 @@ ynh_script_progression --message="Stopping a systemd service..." --weight=1
 ynh_systemd_action --service_name=$app --action="stop"
 
 #=================================================
-# ENSURE DOWNWARD COMPATIBILITY
-#=================================================
-ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
-
-# If db_name doesn't exist, create it
-if [ -z $db_name ]; then
-	db_name=$(ynh_sanitize_dbid $app)
-#REMOVEME? 	ynh_app_setting_set $app db_name $db_name
-fi
-
-# If install_dir doesn't exist, create it
-if [ -z $install_dir ]; then
-#REMOVEME? 	install_dir=/opt/yunohost/$app
-#REMOVEME? 	ynh_app_setting_set $app install_dir $install_dir
-fi
-
-# If data directory doesn't exists
-if [ -z $install_dir/data ]; then
-	mkdir $install_dir/data
-fi
-
-# check data directory permission
-chown -R $app: $install_dir/data
-
-#=================================================
-# CREATE DEDICATED USER
-#=================================================
-#REMOVEME? ynh_script_progression --message="Making sure dedicated system user exists..." --weight=2
-
-# Create a dedicated user (if not existing)
-#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir"
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 
@@ -69,17 +36,8 @@ then
 	ynh_setup_source --dest_dir="$install_dir" 
 fi
 
-chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
-
-#=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=2
-
-# Create a dedicated NGINX config
-ynh_add_nginx_config
 
 #=================================================
 # SPECIFIC UPGRADE
@@ -98,16 +56,11 @@ chown $app:$app "$install_dir/config.yml"
 #=================================================
 ynh_script_progression --message="Upgrading systemd configuration..." --weight=1
 
-# Create a dedicated systemd config
-architecture=$YNH_ARCH
-ynh_add_systemd_config
+# Create a dedicated NGINX config
+ynh_add_nginx_config
 
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
+# Create a dedicated systemd config
+ynh_add_systemd_config
 
 yunohost service add $app
 
@@ -117,13 +70,6 @@ yunohost service add $app
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 ynh_systemd_action --service_name=$app --action="start"
-
-#=================================================
-# RELOAD NGINX
-#=================================================
-#REMOVEME? ynh_script_progression --message="Reloading NGINX web server..." --weight=1
-
-#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

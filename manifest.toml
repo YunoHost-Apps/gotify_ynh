@@ -33,6 +33,10 @@ ram.runtime = "50M"
     type = "path"
     default = "/gotify"
 
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
     [install.admin]
     type = "user"
 

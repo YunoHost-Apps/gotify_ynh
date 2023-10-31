@@ -37,7 +37,7 @@ How to configure this app:
 * Official app website: <http://gotify.net>
 * Official admin documentation: <https://gotify.net/docs/index>
 * Upstream app code repository: <https://github.com/gotify/server>
-* YunoHost documentation for this app: <https://yunohost.org/app_gotify>
+* YunoHost Store: <https://apps.yunohost.org/app/gotify>
 * Report a bug: <https://github.com/YunoHost-Apps/gotify_ynh/issues>
 
 ## Developer info

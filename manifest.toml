@@ -57,7 +57,6 @@ ram.runtime = "50M"
         amd64.sha256 = "53ebd14063c36aba91844e9a7671a51b14878b4a1d8599c92dd8dbcc8e7d4527"
         i386.url = "https://github.com/gotify/server/releases/download/v2.3.0/gotify-linux-386.zip"
         i386.sha256 = "99db17eec0a1fa0a12ff3df463d77078a5114a57dbe1559e7a31e4c428ebe084"
-        rename = "gotify"
 
     [resources.system_user]
 

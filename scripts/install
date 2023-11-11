@@ -15,6 +15,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Setting up source files..." --weight=6
 
 ynh_setup_source --dest_dir="$install_dir" 
+mv $install_dir/gotify-linux-* $install_dir/gotify
 
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"

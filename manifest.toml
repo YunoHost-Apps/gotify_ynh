@@ -1,0 +1,77 @@
+packaging_format = 2
+
+id = "gotify"
+name = "Gotify"
+description.en = "Simple server for sending and receiving messages"
+description.fr = "Simple serveur pour envoyer et recevoir des messages"
+
+version = "2.4.0~ynh1"
+
+maintainers = ["plopoyop"]
+
+[upstream]
+license = "MIT"
+website = "http://gotify.net"
+admindoc = "https://gotify.net/docs/index"
+code = "https://github.com/gotify/server"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/gotify"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.admin]
+    type = "user"
+
+    [install.password]
+    type = "password"
+
+[resources]
+        [resources.sources.main]
+        in_subdir = false
+        armhf.url = "https://github.com/gotify/server/releases/download/v2.4.0/gotify-linux-arm-7.zip"
+        armhf.sha256 = "ac95becd69bb929bacdcaa96146a096d52022184e248771c9b165d0e9de7ce62"
+        arm64.url = "https://github.com/gotify/server/releases/download/v2.4.0/gotify-linux-arm64.zip"
+        arm64.sha256 = "dcbd8bc712eba260f6478c972d23b422cfa22783ab74b92df68cd8004d7d0e8d"
+        amd64.url = "https://github.com/gotify/server/releases/download/v2.4.0/gotify-linux-amd64.zip"
+        amd64.sha256 = "19abcf38d2624ec648d77531924b7698d79eefe2cc0d4690c72aefcb441e0279"
+        i386.url = "https://github.com/gotify/server/releases/download/v2.4.0/gotify-linux-386.zip"
+        i386.sha256 = "8e6c44a53fc32e857f55ce32180990a560000fb591e2a6039ff3a4acccb045d8"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+    subdirs = ["images", "plugins"]
+
+    [resources.ports]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.apt]
+   packages = "mariadb-server"
+
+    [resources.database]
+    type = "mysql"

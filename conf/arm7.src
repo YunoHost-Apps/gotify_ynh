@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/gotify/server/releases/download/v2.3.0/gotify-linux-arm-7.zip
-SOURCE_SUM=510030433d27fb11566f7f26c2159a70a35deddc6a595be5a802467dc7408f26
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=zip
-SOURCE_IN_SUBDIR=false
-SOURCE_FILENAME=
-SOURCE_EXTRACT=true

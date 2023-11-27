@@ -19,25 +19,18 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 Gotify est un serveur simple permettant d'envoyer et de recevoir des messages via websocket.
 
 
-**Version incluse :** 2.3.0~ynh1
+**Version incluse :** 2.4.0~ynh1
 
 ## Captures d’écran
 
 ![Capture d’écran de Gotify](./doc/screenshots/ui.png)
-
-## Avertissements / informations importantes
-
-## Configuration
-
-Pour configurer Gotify :
-> Éditer le fichier `config.yml` avec SSH.
 
 ## Documentations et ressources
 
 * Site officiel de l’app : <http://gotify.net>
 * Documentation officielle de l’admin : <https://gotify.net/docs/index>
 * Dépôt de code officiel de l’app : <https://github.com/gotify/server>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_gotify>
+* YunoHost Store: <https://apps.yunohost.org/app/gotify>
 * Signaler un bug : <https://github.com/YunoHost-Apps/gotify_ynh/issues>
 
 ## Informations pour les développeurs

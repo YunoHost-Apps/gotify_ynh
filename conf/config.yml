@@ -18,5 +18,5 @@ defaultuser: # on database creation, gotify creates an admin user
   name: __ADMIN__ # the username of the default user
   pass: __PASSWORD__ # the password of the default user
 passstrength: 12 # the bcrypt password strength (higher = better but also slower)
-uploadedimagesdir: data/images # the directory for storing uploaded images
-pluginsdir: data/plugins # the directory where plugin resides
+uploadedimagesdir: __DATA_DIR__/images # the directory for storing uploaded images
+pluginsdir: __DATA_DIR__/plugins # the directory where plugin resides

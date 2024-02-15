@@ -58,6 +58,12 @@ ram.runtime = "50M"
         i386.url = "https://github.com/gotify/server/releases/download/v2.4.0/gotify-linux-386.zip"
         i386.sha256 = "8e6c44a53fc32e857f55ce32180990a560000fb591e2a6039ff3a4acccb045d8"
 
+        autoupdate.strategy = "latest_github_release"
+        autoupdate.asset.armhf = "gotify-linux-arm-7.zip"
+        autoupdate.asset.arm64 = "gotify-linux-arm64.zip"
+        autoupdate.asset.amd64 = "gotify-linux-amd64.zip"
+        autoupdate.asset.i386 = "gotify-linux-386.zip"
+
     [resources.system_user]
 
     [resources.install_dir]

@@ -33,7 +33,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --keep="config.yml"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="config.yml"
 	mv $install_dir/gotify-linux-* $install_dir/gotify
 fi
 

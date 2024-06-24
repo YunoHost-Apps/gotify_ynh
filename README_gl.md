@@ -19,7 +19,7 @@ NON debe editarse manualmente.
 Gotify is a simple server for sending and receiving messages in real-time per web socket.
 
 
-**Versión proporcionada:** 2.4.0~ynh2
+**Versión proporcionada:** 2.5.0~ynh1
 
 ## Capturas de pantalla
 

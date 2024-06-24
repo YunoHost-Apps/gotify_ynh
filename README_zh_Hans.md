@@ -19,7 +19,7 @@
 Gotify is a simple server for sending and receiving messages in real-time per web socket.
 
 
-**分发版本：** 2.4.0~ynh2
+**分发版本：** 2.5.0~ynh1
 
 ## 截图
 

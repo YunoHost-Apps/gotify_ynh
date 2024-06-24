@@ -19,7 +19,7 @@ Il NE doit PAS être modifié à la main.
 Gotify est un serveur simple permettant d'envoyer et de recevoir des messages via websocket.
 
 
-**Version incluse :** 2.4.0~ynh2
+**Version incluse :** 2.5.0~ynh1
 
 ## Captures d’écran
 

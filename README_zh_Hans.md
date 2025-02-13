@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Gotify
 
-[![集成程度](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![工作状态](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/gotify)](https://ci-apps.yunohost.org/ci/apps/gotify/)
+![工作状态](https://apps.yunohost.org/badge/state/gotify)
+![维护状态](https://apps.yunohost.org/badge/maintained/gotify)
 
 [![使用 YunoHost 安装 Gotify](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 
@@ -19,7 +21,7 @@
 Gotify is a simple server for sending and receiving messages in real-time per web socket.
 
 
-**分发版本：** 2.5.0~ynh1
+**分发版本：** 2.6.1~ynh1
 
 ## 截图
 

@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Gotify for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/gotify.svg)](https://dash.yunohost.org/appci/app/gotify) ![Working status](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/gotify)](https://ci-apps.yunohost.org/ci/apps/gotify/)
+![Working status](https://apps.yunohost.org/badge/state/gotify)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/gotify)
 
 [![Install Gotify with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 
@@ -19,7 +21,7 @@ It shall NOT be edited by hand.
 Gotify is a simple server for sending and receiving messages in real-time per web socket.
 
 
-**Shipped version:** 2.5.0~ynh1
+**Shipped version:** 2.6.1~ynh1
 
 ## Screenshots
 

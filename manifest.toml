@@ -5,7 +5,7 @@ name = "Gotify"
 description.en = "Simple server for sending and receiving messages"
 description.fr = "Simple serveur pour envoyer et recevoir des messages"
 
-version = "2.5.0~ynh1"
+version = "2.6.1~ynh1"
 
 maintainers = ["plopoyop"]
 
@@ -16,7 +16,7 @@ admindoc = "https://gotify.net/docs/index"
 code = "https://github.com/gotify/server"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.0"
 architectures = "all"
 multi_instance = true
 
@@ -49,14 +49,14 @@ ram.runtime = "50M"
 [resources]
         [resources.sources.main]
         in_subdir = false
-        armhf.url = "https://github.com/gotify/server/releases/download/v2.5.0/gotify-linux-arm-7.zip"
-        armhf.sha256 = "85017500913394421a9fa31e339327fb73cc3ee8753724cfcb95728c46de556a"
-        arm64.url = "https://github.com/gotify/server/releases/download/v2.5.0/gotify-linux-arm64.zip"
-        arm64.sha256 = "c84c794719d1c56fc9c1b781579ac3c5326995a201cf758ce38d5aa208e070ad"
-        amd64.url = "https://github.com/gotify/server/releases/download/v2.5.0/gotify-linux-amd64.zip"
-        amd64.sha256 = "6cf0fb4608f734008c42850c15248a287621b620852d91d8cec6787d1c0e7189"
-        i386.url = "https://github.com/gotify/server/releases/download/v2.5.0/gotify-linux-386.zip"
-        i386.sha256 = "a17340eeb95062ca39c36c1047cad16e9f97b4a33b914cef97b3bf3bff069d42"
+        armhf.url = "https://github.com/gotify/server/releases/download/v2.6.1/gotify-linux-arm-7.zip"
+        armhf.sha256 = "43f300ae5985f2520a91b437925141a925356fa3074f075d4e9b7fe9fdfffd1b"
+        arm64.url = "https://github.com/gotify/server/releases/download/v2.6.1/gotify-linux-arm64.zip"
+        arm64.sha256 = "1e333b1b2bdb7d9c7c128819331132d023808352684129e43d2d338368a848b7"
+        amd64.url = "https://github.com/gotify/server/releases/download/v2.6.1/gotify-linux-amd64.zip"
+        amd64.sha256 = "77c90e271011d0a9f9024b0f869d0e044d886593639b5884050de0073739fab3"
+        i386.url = "https://github.com/gotify/server/releases/download/v2.6.1/gotify-linux-386.zip"
+        i386.sha256 = "c16993051294701a71933859b1b4512e9095d95edbf1bce43e69115f6f08353b"
 
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset.armhf = "gotify-linux-arm-7.zip"

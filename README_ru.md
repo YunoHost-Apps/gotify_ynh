@@ -5,7 +5,9 @@
 
 # Gotify для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/gotify.svg)](https://ci-apps.yunohost.org/ci/apps/gotify/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/gotify)](https://ci-apps.yunohost.org/ci/apps/gotify/)
+![Состояние работы](https://apps.yunohost.org/badge/state/gotify)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/gotify)
 
 [![Установите Gotify с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 

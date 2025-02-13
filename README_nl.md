@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Gotify voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/gotify.svg)](https://ci-apps.yunohost.org/ci/apps/gotify/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/gotify)](https://ci-apps.yunohost.org/ci/apps/gotify/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/gotify)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/gotify)
 
 [![Gotify met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 

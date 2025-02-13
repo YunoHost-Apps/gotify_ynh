@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Gotify untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/gotify.svg)](https://ci-apps.yunohost.org/ci/apps/gotify/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/gotify.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/gotify.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/gotify)](https://ci-apps.yunohost.org/ci/apps/gotify/)
+![Status kerja](https://apps.yunohost.org/badge/state/gotify)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/gotify)
 
 [![Pasang Gotify dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gotify)
 

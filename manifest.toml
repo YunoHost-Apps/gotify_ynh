@@ -16,7 +16,7 @@ admindoc = "https://gotify.net/docs/index"
 code = "https://github.com/gotify/server"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.0"
 architectures = "all"
 multi_instance = true
 

@@ -7,7 +7,7 @@ name = "Gotify"
 description.en = "Simple server for sending and receiving messages"
 description.fr = "Simple serveur pour envoyer et recevoir des messages"
 
-version = "2.6.3~ynh1"
+version = "2.6.3~ynh2"
 
 maintainers = ["plopoyop"]
 

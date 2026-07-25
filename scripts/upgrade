@@ -15,16 +15,16 @@ ynh_systemctl --service=$app --action="stop" --log_path="systemd"
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --keep="config.yml"
+ynh_setup_source --dest_dir="$install_dir" --keep="gotify-server.env"
 
 mv $install_dir/gotify-linux-* $install_dir/gotify
 
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
-#ynh_script_progression "Updating configuration..."
+ynh_script_progression "Updating configuration..."
 
-#ynh_config_add --template="config.yml" --destination="$install_dir/config.yml"
+ynh_config_add --template="gotify-server.env" --destination="$install_dir/gotify-server.env"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

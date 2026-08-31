@@ -7,7 +7,7 @@ name = "Gotify"
 description.en = "Simple server for sending and receiving messages"
 description.fr = "Simple serveur pour envoyer et recevoir des messages"
 
-version = "3.0.0~ynh1"
+version = "3.1.0~ynh1"
 
 maintainers = ["plopoyop"]
 
@@ -51,14 +51,14 @@ ram.runtime = "50M"
 [resources]
     [resources.sources.main]
     in_subdir = false
-    armhf.url = "https://github.com/gotify/server/releases/download/v3.0.0/gotify-linux-arm-7.zip"
-    armhf.sha256 = "7f66df9c941e300006f2b37abca6703747ad4c322b2cb47686c89fa658bc94e1"
-    arm64.url = "https://github.com/gotify/server/releases/download/v3.0.0/gotify-linux-arm64.zip"
-    arm64.sha256 = "abdb55509a8f3844c866a135a3858d579388a7c4b23f5676a1f6c4d8e8ddb227"
-    amd64.url = "https://github.com/gotify/server/releases/download/v3.0.0/gotify-linux-amd64.zip"
-    amd64.sha256 = "b21c83f19fcc5715e5427f11797207ceddc345bebc1b5342aaf143967a979534"
-    i386.url = "https://github.com/gotify/server/releases/download/v3.0.0/gotify-linux-386.zip"
-    i386.sha256 = "264da9aa569574e879a8a3a9a350fd3b001edb8095a3972f9151e54d72db8081"
+    armhf.url = "https://github.com/gotify/server/releases/download/v3.1.0/gotify-linux-arm-7.zip"
+    armhf.sha256 = "cb6e45da9af2be179f16e8d7c61b7ef89f5f9fc5a5284455c985f32c7017ee65"
+    arm64.url = "https://github.com/gotify/server/releases/download/v3.1.0/gotify-linux-arm64.zip"
+    arm64.sha256 = "69d8e6b9c56ba561ff400cc4cb2c588993c32ef7ea8e37a019161daf256dd40e"
+    amd64.url = "https://github.com/gotify/server/releases/download/v3.1.0/gotify-linux-amd64.zip"
+    amd64.sha256 = "01c4869f1cf874634416959f7aab45f7eab53597e018479fcf3ce76ae8465c75"
+    i386.url = "https://github.com/gotify/server/releases/download/v3.1.0/gotify-linux-386.zip"
+    i386.sha256 = "11a847980781efb98b3e96e273a133cf87c46296850a5b1fc7fabc58f4f30e86"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.armhf = "gotify-linux-arm-7.zip"
